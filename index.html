@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+      <head>
+          <meta charset="UTF-8">
+          <title>CRUD Tareas</title>
+          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      </head>
+      <body>
+          <h1>Lista de Tareas</h1>
+          <!-- Button trigger modal -->
+          <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#myModal">
+            + Agregar Tarea
+          </button>
+
+          <table class="table table-striped table-responsive">
+            <thead>
+              <th>Nombre</th>
+              <th>Estado</th>
+              <th>Acciones</th>
+            </thead>
+            <tbody id="tasks-list">
+              
+            </tbody>
+          </table>
+          <!-- Modal -->
+          <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+              <form id="add-form">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Nueva tarea</h4>
+                  </div>
+                  <div class="modal-body">
+                      <div class="form-group">
+                        <label for="nombre-tarea">Nombre tarea:</label>
+                        <input type="text" class="form-control" name="nombre" id="nombre-tarea" placeholder="Tarea">
+                      </div>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                    <button type="submit" class="btn btn-primary">+ Agregar</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <!-- Modal -->
+        <div class="modal fade" id="modalInfo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Detalle tarea</h4>
+              </div>
+              <div class="modal-body">
+                <h5><strong>Nombre: </strong><span><small id="nombre"> </small> </span> </h5>
+                <h5><strong>id: </strong><span><small id="id"> </small> </span></h5>
+                <h5><strong>Fecha:</strong> <span><small id="fecha"> </small> </span> </h5>
+                <h5><strong>Estado:</strong> <span><small id="estado"> </small> </span></h5>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+          <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+          <script src="js/app.js"></script>
+      </body>
+</html>
